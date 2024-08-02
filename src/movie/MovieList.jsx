@@ -9,7 +9,6 @@ function MovieList() {
   return (
     <>
       <SearchMovie />
-
       <div className="movieList">
         {!searchMovie.length ? <NotFound /> : <MovieItem />}
       </div>

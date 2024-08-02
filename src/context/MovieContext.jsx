@@ -38,15 +38,6 @@ function MovieProvider({ children }) {
       setIsloading(true);
     } catch (error) {
       setIsloading(false);
-      movies.pop();
-
-      setMovies((movies) => [
-        ...movies,
-        {
-          name: "Family Pot",
-          "poster-image": "placeholder_for_missing_posters.png",
-        },
-      ]);
     }
   }, [num]);
   return (
