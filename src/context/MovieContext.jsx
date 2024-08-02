@@ -38,7 +38,7 @@ function MovieProvider({ children }) {
       setIsloading(true);
     } catch (error) {
       setIsloading(false);
-      movies.pop();
+
       setMovies((movie) => [
         ...movie,
         {
