@@ -12,16 +12,16 @@ function MovieProvider({ children }) {
   const [isLoading, setIsloading] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
 
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   const searchMovie =
     searchQuery.length > 0
       ? movies.filter((movie) =>
           `${movie.name}`.toLowerCase().includes(searchQuery.toLowerCase())
         )
       : movies;
-
-  useEffect(() => {
-    fetchData();
-  }, []);
 
   const fetchData = useCallback(async () => {
     try {
@@ -38,7 +38,7 @@ function MovieProvider({ children }) {
       setIsloading(true);
     } catch (error) {
       setIsloading(false);
-
+      movies.pop();
       setMovies((movie) => [
         ...movie,
         {
@@ -48,6 +48,7 @@ function MovieProvider({ children }) {
       ]);
     }
   }, [num]);
+
   return (
     <MovieContext.Provider
       value={{
