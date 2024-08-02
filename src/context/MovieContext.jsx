@@ -39,13 +39,20 @@ function MovieProvider({ children }) {
     } catch (error) {
       setIsloading(false);
       // movies.pop();
-      setMovies((movie) => [
-        ...movie,
-        {
-          name: "Family Pot",
-          "poster-image": "placeholder_for_missing_posters.png",
-        },
-      ]);
+      let movieContainer = movies;
+      movieContainer.pop();
+      movieContainer.push({
+        name: "Family Pot",
+        "poster-image": "placeholder_for_missing_posters.png",
+      });
+      setMovies([...movieContainer]);
+      // setMovies((movie) => [
+      //   ...movie,
+      //   {
+      //     name: "Family Pot",
+      //     "poster-image": "placeholder_for_missing_posters.png",
+      //   },
+      // ]);
     }
   }, [num]);
 
