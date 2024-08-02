@@ -44,12 +44,13 @@ const MoviItem = React.memo(() => {
               <Grid item xs={4} key={index}>
                 <Link to={`poster/${movie["poster-image"]}`}>
                   <Img
-                    src={`https://test.create.diagnal.com/images/${
-                      movie["poster-image"] === "posterthatismissing.jpg"
-                        ? "placeholder_for_missing_posters.png"
-                        : movie["poster-image"]
-                    }`}
-                    alt=""
+                    // src={`https://test.create.diagnal.com/images/${
+                    //   movie["poster-image"] === "posterthatismissing.jpg"
+                    //     ? "placeholder_for_missing_posters.png"
+                    //     : movie["poster-image"]
+                    // }`}
+                    src={`https://test.create.diagnal.com/images/${movie["poster-image"]}`}
+                    alt="poster"
                   />
                 </Link>
                 <P>{movie.name}</P>
