@@ -1,28 +1,21 @@
-// import MovieList from "./MovieList";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Suspense, lazy } from "react";
+import Loader from "./ui/Loader";
 
-import { BrowserRouter, Route,Routes } from "react-router-dom";
-// import Poster from './Poster'
-import { Suspense ,lazy} from "react";
-import Loader from './Loader'
-
-const MovieList = lazy(() => import("./MovieList"));
-const Poster = lazy(() => import("./Poster"));
-
+const MovieList = lazy(() => import("./movie/MovieList"));
+const Poster = lazy(() => import("./ui/Poster"));
 
 function App() {
-
   return (
     <div>
-      
-
       <BrowserRouter>
-        <Suspense fallback = {<Loader/>}>
+        <Suspense fallback={<Loader />}>
           <Routes>
-            <Route path="/" element = {<MovieList/>}/>
-            <Route path="poster/:poster" element = {<Poster/>}/>
+            <Route path="/" element={<MovieList />} />
+            <Route path="poster/:poster" element={<Poster />} />
           </Routes>
         </Suspense>
-        </BrowserRouter>
+      </BrowserRouter>
     </div>
   );
 }

@@ -13,10 +13,10 @@ body {
   /* padding: 10px; */
   font-family: "Titillium Web", sans-serif;
 }
-.movieList{
+.movieList {
   padding: 20px 10px;
 }
-.poster{
+.poster {
   height: 90vh;
   width: 100%;
   display: flex;
@@ -24,62 +24,55 @@ body {
   justify-content: center;
   position: relative;
 }
-.btn{
-position: absolute;
-font-size: 35px;
-top: 20%;
-right: 18%;
-
+.btn {
+  position: absolute;
+  font-size: 35px;
+  top: 20%;
+  right: 18%;
 }
-.search{
+.search {
   display: flex;
   flex-direction: column;
-position: fixed;
-
+  position: fixed;
 }
-.searchContainer{
+.searchContainer {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top:10px ;
-position: fixed;
-padding: 0 10px;
-
+  margin-top: 10px;
+  position: fixed;
+  padding: 0 10px;
 }
 
 .searchContainer img {
-  height:25px;
+  height: 25px;
   width: 25px;
-
 }
 
-.searchContainer input{
-padding: 10px;
-background-color: #3333;
-border-radius:10px ;
-color: #fff;
+/* .searchContainer input {
+  padding: 10px;
+  background-color: #3333;
+  border-radius: 10px;
+  color: #fff;
 
-border: none;
-margin-left: auto;
-
+  border: none;
+  margin-left: auto;
 }
 
-.searchContainer input:focus{
+.searchContainer input:focus {
   outline: none;
-    box-shadow: 0px 0px 4px #fff;/*here change the color*/
-    border:1px solid #fff;/*here change the color*/
+  box-shadow: 0px 0px 4px #fff;
+  border: 1px solid #fff;
+} */
+
+.navBar {
+  width: 100vw;
+  height: 100px;
+  object-fit: cover;
 }
 
-.navBar{
- 
-  width: 100%;
-height: 100px;
-
-
-}
-
-.notFoundContainer{
+.notFoundContainer {
   height: 90vh;
   width: 100%;
   display: flex;
@@ -87,27 +80,50 @@ height: 100px;
   justify-content: center;
   flex-direction: column;
   text-align: center;
-  
 }
 
-.notFoundContainer img{ 
+.notFoundContainer img {
   width: 200px;
   height: 200px;
-
 }
 
-.notFoundContainer p{
+.notFoundContainer p {
   margin-top: 30px;
   font-size: 20px;
   color: #4e4949;
-
 }
 
-.loader{
+.loader {
   height: 90vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
+/*  */
+.box {
+  height: 30px;
+  /* width: 30px; */
+  display: flex;
+  cursor: pointer;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 30px;
+  align-items: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.box input {
+  width: 200px;
+  outline: none;
+  border: none;
+  font-weight: 500;
+  transition: 0.8s;
+  background: transparent;
+}
+.searchIcon {
+  color: #333;
+  font-weight: 900;
+  font-size: 1.5rem;
 }
