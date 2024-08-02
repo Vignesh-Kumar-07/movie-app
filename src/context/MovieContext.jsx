@@ -46,6 +46,8 @@ function MovieProvider({ children }) {
         "poster-image": "placeholder_for_missing_posters.png",
       });
       setMovies([...movieContainer]);
+
+      console.log(movies.length);
       // setMovies((movie) => [
       //   ...movie,
       //   {
