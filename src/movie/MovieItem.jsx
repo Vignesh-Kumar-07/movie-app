@@ -10,7 +10,7 @@ import { useMovie } from "../context/MovieContext";
 
 const Img = styled("img")({
   aspectRatio: "2/3",
-  display: "block",
+  // display: "block",
   maxWidth: "100%",
   maxHeight: "100%",
 });
